@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Result{% endblock %}
+
+{% block content %}
+
+    <h3><a href="{{link_to_post}}" target="_blank">Reported Url</a></h3>
+    <div>Post Content: <br>{{content}}</div>
+    
+    <div><br><br><h2> The post appears to be genuine with a probability of {{prob}} </h2><br></div>
+    <h3>News articles related to your query:</h3>
+    <ul>
+    {% for key, value  in articles.items %}
+    
+    <li><a href="{{key}}" target="_blank">{{value}}</a></li>
+    
+    {% endfor %}
+    </ul>
+    
+    <div>
+        <a href="{% url 'home' %}">Back to Home Page</a>
+    </div>
+
+{% endblock %}

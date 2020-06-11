@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}Home Page{% endblock %}
+
+{% load static %}
+{% block static %}
+<link rel="stylesheet" href= "{% static 'css/index.css' %}">
+<script src="{% static 'js/index.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+<h1>Reporting Portal</h1>
+
+<form action="verify" method="POST">
+
+    {% csrf_token %}
+
+    <div>
+        <label for="link">Link to the Facebook Post: </label>
+        <input type="url" name="link" id="link" 
+            size="35px" placeholder="eg. https://www.facebook.com/xyz/posts/n" required>
+    </div>
+
+    <div>
+        <label for="tf">Select Time Period Mentioned in the Post: </label>
+        <select name="time_frame" id="tf">
+            <option value="anytime">Anytime</option>
+            <option value="hour">Past Hour</option>
+            <option value="day">Past 24 Hours</option>
+            <option value="week">Past week</option>
+            <option value="year">Past Year</option>
+        </select>
+    </div>
+
+    <div class="keywords">
+        <label for="keywords">Enter keywords: </label>
+        <textarea name="keywords" id="keywords" cols="50" rows="1"
+            placeholder="eg. 'Covid-19 Curing Tea'"></textarea>
+    </div>
+
+    <div><input type="reset"></div>
+    <div><input type="submit" value="submit" onclick="return checkWordCount()"></div>
+</form>
+
+{% endblock %}
