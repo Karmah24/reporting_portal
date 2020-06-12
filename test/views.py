@@ -16,7 +16,7 @@ def verify(request):
     if(match_keywords.check(content,keywords)):
         articles = news_search.get_articles(time_frame, keywords)
         match = verify_post.check(articles, content)
-        if(match >= 0.5):
+        if(match >= 0.1):
             return render(request, 'result.html', {'link_to_post': url, 'content': content, 
                 'articles': articles, 'prob': match})
         else:

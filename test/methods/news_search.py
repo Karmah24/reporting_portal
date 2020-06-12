@@ -20,7 +20,7 @@ def get_articles(time_frame, keywords):
     src = result.content
     soup = BeautifulSoup(src, 'lxml')
     articles = []
-    for a in soup.select('h3:nth-of-type(-n+5)'):   
+    for a in soup.select('h3:nth-of-type(-n+1)'):   
         articles.append(a)
     article_headlines = []
     article_links = []
