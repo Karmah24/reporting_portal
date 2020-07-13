@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+
+{% block title %}FAQ Page{% endblock %}
+
+{% load static %}
+{% block static %}
+<link rel="stylesheet" href="{% static 'css/faq.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<h1 class="Faq">FAQ</h1>
+
+<div class="accordion">
+    <div class="accordion-item">
+        <div class="accordion-item-header">
+            How do you decide whether the news is fake or not?
+        </div>
+        <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+                We decide the authenticity of the news based on some of our trusted news sources.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <div class="accordion-item-header">
+            What are the trusted sources you use?
+        </div>
+        <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+                <p>
+                    1. Indian express
+                </p>
+                    2. Financial express
+                <p>
+                    3. Hindu
+                <p>
+                    4. Hindustan Times
+                <p>
+                    5. BBC news
+                <p>
+                    6. Times Now
+                <p>
+                    7. Deccan Herald
+                <p>
+                    8. News 18
+                <p>
+                    9. Reuters (India)
+                <p>
+                    10. Reuters
+                <p>
+                    11. Forbes
+                <p>
+                    12. NDTV sports
+                <p>
+                    13. Bloomberg
+                <p>
+                    14. CNBC
+                <p>
+                    15. Fox News
+                <p>
+                    16. Fox Business
+                <p>
+                    17. The Guardian
+                <p>
+                    18. Wall Street Journal
+                <p>
+                    19. Yahoo News
+                <p>
+                    20. Telegraph (UK)
+                <p>
+                    21. Al Jazeera
+                <p></p>
+                22. ESPN India <p>
+                    23. Sky News
+                <p>
+                    24. Euro News
+                <p>
+                    25. Washington Post
+                <p></p>
+                26. The Times (UK)
+                27. Tribune India
+                28. New Zealand Herald
+                29. The Straits Times (Singapore)<p>
+                    30. Billboard
+                <p>
+                    31. Rolling Stone
+                <p>
+                    32. Yahoo News (India)
+                <p>
+                    33. Yahoo News
+                <p>
+                    34. Africa News (Africa)
+                <p>
+                    35. India Today
+                <p></p>
+                36. NDTV /<p></p>
+                37. CNN <p></p>
+                38. Times of India <p></p>
+                39. Economic Times <p></p>
+                40. Business Insider India <p></p>
+                41. Daily Mail (UK) <p></p>
+                42. Sky Sports <p></p>
+                43. NBC News <p></p>
+                44. Politico <p></p>
+                45. The Associated Press <p></p>
+                46. The New York Times (US) <p></p>
+                47. The Daily Gazettehttps <p></p>
+                48. Science Daily <p></p>
+                49. Science News Journal <p></p>
+                50. SciTech <p></p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <div class="accordion-item-header">
+            Are the trusted sources updated regularly?
+        </div>
+        <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+                Yes the trusted sources are updated regularly.
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-item-header">
+            Can I give a link of a post that contains both image and text?
+        </div>
+        <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+                The link can contain all kinds of images, urls and videos.
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-item-header">
+            Can I give a link of other social media posts other than facebook?
+        </div>
+        <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+                <ul style="padding-left: 1rem;">
+                    Yes, you can give the link of any social media posts.
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-item-header">
+            Does it gives the results with 100% accuracy?
+        </div>
+        <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+                The results are not 100% accurate.
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/faq.js' %}" charset="utf-8">
+    </script>
+
+    {% endblock %}

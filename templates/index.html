@@ -4,8 +4,7 @@
 
 {% load static %}
 {% block static %}
-<link rel="stylesheet" href= "{% static 'css/home.css' %}">
-<script src="{% static 'js/index.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -16,8 +15,8 @@
 
     <div class="form-group">
         <label for="link">Link to the Facebook Post: </label>
-        <input type="url" name="link" id="link" 
-            placeholder="eg. https://www.facebook.com/xyz/posts/n" required class="form-control">
+        <input type="url" name="link" id="link" placeholder="eg. https://www.facebook.com/xyz/posts/n" required
+            class="form-control">
         <div class="invalid-feedback">Please Enter a valid url</div>
     </div>
 
@@ -34,25 +33,27 @@
 
     <div class="form-group">
         <label for="keywords">Enter keywords: </label>
-        <input type="text" name="keywords" id="keywords"
-            placeholder="Avoid use of articles and prepositions" class="form-control" pattern=".{25,}" required>
+        <input type="text" name="keywords" id="keywords" placeholder="Avoid use of articles and prepositions"
+            class="form-control" pattern=".{25,}" required>
         <div class="invalid-feedback">Enter atleast 5 Keywords</div>
     </div>
     <div class="row ">
-        <div class="col"><input type="reset" class="btn btn-primary btn-outline" ></div>
-        <div class="col"><input type="submit" value="Submit"  class="btn btn-primary" onclick="return checkWordCount()"></div>
+        <div class="col"><input type="reset" class="btn btn-primary btn-outline"></div>
+        <div class="col"><input type="submit" value="Submit" class="btn btn-primary" onclick="return checkWordCount()">
+        </div>
     </div>
 </form>
 
 <script>
     var form = document.querySelector('.needs-validation');
-    form.addEventListener('submit', function(event){
-        if(form.checkValidity() === false) {
+    form.addEventListener('submit', function (event) {
+        if (form.checkValidity() === false) {
             event.preventDefault();
             event.stopPropagation();
         }
         form.classList.add('was-validated')
     })
 </script>
+<script src="{% static 'js/index.js' %}"></script>
 
 {% endblock %}
